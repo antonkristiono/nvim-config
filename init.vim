@@ -4,6 +4,10 @@ Plug 'pantharshit00/vim-prisma'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-sleuth'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'tpope/vim-fugitive'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -32,8 +36,8 @@ tnoremap <Esc> <C-\><C-n>
 au BufEnter * if &buftype == 'terminal' | :startinsert | endif
 " " open terminal on ctrl+n
 function! OpenTerminal()
-	split term://bash
-	resize 10
+  split term://bash
+  resize 10
 endfunction
 nnoremap <c-n> :call OpenTerminal()<CR>
 "//
@@ -53,12 +57,16 @@ nnoremap <A-l> <C-w>l
 "// File Searching
 nnoremap <C-p> :FZF<CR>
 let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-s': 'split',
-  \ 'ctrl-v': 'vsplit'
-  \}
+      \ 'ctrl-t': 'tab split',
+      \ 'ctrl-s': 'split',
+      \ 'ctrl-v': 'vsplit'
+      \}
 "//
 
+"// Tabs
+set expandtab
+set tabstop=2
+set shiftwidth=2
 
 
 "--------------
