@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'davidhalter/jedi-vim'
 Plug 'pantharshit00/vim-prisma'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -75,7 +76,7 @@ set shiftwidth=2
 " let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
 
 " set filetypes as typescriptreact
-" autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
+autocmd BufNewFile,BufRead *.tsx,*.js set filetype=typescriptreact
 
 
 
